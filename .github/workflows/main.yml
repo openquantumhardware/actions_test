@@ -11,6 +11,6 @@ jobs:
     - env:
         GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
         PR_NUMBER: ${{ github.event.pull_request.number }}
-    - run: |
+      run: |
         echo The PR was merged
         echo $PR_NUMBER
