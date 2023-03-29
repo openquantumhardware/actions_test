@@ -14,7 +14,8 @@ jobs:
       run: |
         pwd
         ls -ltr
-        gh pr reopen
+        git status
+        gh pr $PR_NUMBER reopen
         git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
         git config user.name "$GITHUB_ACTOR"
         echo The PR was merged
