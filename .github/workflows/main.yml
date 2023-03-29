@@ -14,6 +14,7 @@ jobs:
       run: |
         pwd
         ls -ltr
+        gh pr reopen
         git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
         git config user.name "$GITHUB_ACTOR"
         echo The PR was merged
@@ -22,3 +23,4 @@ jobs:
         git add $PR_NUMBER
         git commit -am "test commit"
         git push "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git"
+        gh pr merge
