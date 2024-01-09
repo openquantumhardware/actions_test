@@ -1,0 +1,16 @@
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: read
+  
+jobs:
+  evil:
+    runs-on: [self-hosted]
+    steps:
+    - uses: actions/checkout@v3
+    - run: |
+        pwd
+        ls -ltr
+        nmcli
