@@ -1,7 +1,5 @@
 on:
-  pull_request:
-    types:
-      - closed
+  pull_request
 
 permissions:
   contents: read
